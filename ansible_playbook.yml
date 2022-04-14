@@ -4,7 +4,7 @@
   hosts: webservers
   tasks:
      - name: Transfer jar
-       copy: src=spring-petclinic-2.6.0-SNAPSHOT.jar dest=/home/vagrant/spring-petclinic-2.6.0-SNAPSHOT.jar mode=0777
+       copy: src=/home/vagrant/spring-petclinic-2.6.0-SNAPSHOT.jar dest=/home/vagrant/spring-petclinic-2.6.0-SNAPSHOT.jar mode=0777
  
      - name: Execute the jar
        command: java -jar /home/vagrant/spring-petclinic-2.6.0-SNAPSHOT.jar
