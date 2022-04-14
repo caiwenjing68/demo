@@ -1,7 +1,6 @@
 ---
-- name: copy and execute jar
+- name: Copy and execute jar
   remote_user: vagrant
-  sudo: yes
   hosts: webservers
   tasks:
      - name: Transfer jar
