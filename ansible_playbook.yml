@@ -1,0 +1,11 @@
+---
+- name: copy and execute jar
+  remote_user: vagrant
+  sudo: yes
+  hosts: 192.168.3.129
+  tasks:
+     - name: Transfer jar
+       copy: src=/home/vagrant/spring-petclinic-2.6.0-SNAPSHOT.jar dest=/home/wenjing/Documents/17646A2 mode=0777
+ 
+     - name: Execute the jar
+       command: java -jar /home/wenjing/Documents/17646A2/spring-petclinic-2.6.0-SNAPSHOT.jar
